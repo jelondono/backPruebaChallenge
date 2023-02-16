@@ -1,5 +1,5 @@
-# backChallenge
-Saludtools Fullstack Challenge
+
+# Saludtools Fullstack Challenge
 
 Descripción del proyecto
 Diseñar una aplicación por medio de la cual se le puedan prescribir medicamentos a pacientes registrados teniendo en cuenta ciertas variables
