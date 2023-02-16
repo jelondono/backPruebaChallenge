@@ -17,4 +17,14 @@ public class PrescriptionRequest {
 
     @NotNull
     private List<Long> medicineIds;
+
+    public PrescriptionRequest(Long patientId, LocalDate prescriptionDate, List<Long> medicineIds) {
+        this.patientId = patientId;
+        this.prescriptionDate = prescriptionDate;
+        this.medicineIds = medicineIds;
+    }
+
+    public PrescriptionRequest() {
+
+    }
 }

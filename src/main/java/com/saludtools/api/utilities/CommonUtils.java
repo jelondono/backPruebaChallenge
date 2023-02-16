@@ -27,7 +27,6 @@ public class CommonUtils {
     public Prescription validatePrescriptionExists(Long id) {
         return prescriptionService.getPrescriptedById(id);
     }
-
     public Patient validatePatientExists(Long id) {
         return  patientService.getPatientById(id);
     }

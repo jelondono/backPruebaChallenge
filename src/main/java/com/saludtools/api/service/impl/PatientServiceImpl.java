@@ -1,6 +1,5 @@
 package com.saludtools.api.service.impl;
 
-import com.saludtools.api.entity.Medicine;
 import com.saludtools.api.entity.Patient;
 import com.saludtools.api.repository.PatientRepository;
 import com.saludtools.api.service.PatientService;
