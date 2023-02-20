@@ -1,5 +1,6 @@
 package com.saludtools.api.controller;
 
+import com.saludtools.api.entity.Gender;
 import com.saludtools.api.entity.Patient;
 import com.saludtools.api.model.ApiResponse;
 import com.saludtools.api.service.PatientService;
@@ -23,14 +24,17 @@ public class PatientController {
     public ResponseEntity<ApiResponse> getAllPatients(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
-            @RequestParam(defaultValue = "id") String sortBy
-          ) {
-        Page<Patient> patients = patientService.getAllPatients(page, size, sortBy);
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(required = false) String nombre,
+            @RequestParam(required = false) Long generoId
+    ) {
+        Page<Patient> patients = patientService.getAllPatients(page, size, sortBy, nombre, generoId);
         if (patients.isEmpty()) {
             throw new ResourceNotFoundException("Pacientes", "paciente", "No existen pacientes");
         }
         return new ResponseEntity<>(new ApiResponse(200, "Pacientes encontrados", patients), HttpStatus.OK);
     }
+
 
 
     @PostMapping
